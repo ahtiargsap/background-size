@@ -1,0 +1,93 @@
+body {
+    background: darkslateblue;
+}
+
+div {
+    background: transparent url("cars.jpg")
+        scroll no-repeat center center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #eee;
+    margin: 0 auto;
+}
+
+.cover {
+    background-size: cover;
+}
+
+
+.contain { 
+    background-color: darkcyan;
+    background-size: contain;
+}
+
+.size { 
+    background-color: darkslategray;
+    background-size: 80% auto;
+}
+
+.repeat { 
+    background-repeat: repeat;
+    background-size: 180px auto;
+}
+
+.repeat-x { 
+    background-color: navy;
+    background-repeat: repeat-x;
+    background-size: 180px auto;
+}
+
+.repeat-y { 
+    background-color: darkred;
+    background-repeat: repeat-y;
+    background-size: 180px auto;
+}
+
+.position { 
+    background-color: darkgreen;
+    background-position: bottom right;
+    background-size: 180px auto;
+}
+
+.attachment { 
+    background-attachment: fixed;
+    background-color: darkorange;
+}
+
+div::after {
+    content: attr(class);
+    position: absolute;
+    font-family: sans-serif;
+    padding: 3px 6px;
+    color: white;
+    background: orange;
+    border-bottom-right-radius: 30%;
+}
+
+a { color: #ddd;}
+
+
+
+@media screen and (min-width:500px) {
+    div {
+        display: block;
+        margin-top: 20px;
+    }
+    .attachment { 
+        background-position: 9px 100px;
+        background-size: 504px auto;
+    }
+}
+
+@media screen and (min-width:960px) {
+    div {
+        display:inline-block;
+        margin-top: 20px;
+        margin-left: 17px;
+    }
+
+    .attachment { 
+        background-position: 25px 100px;
+        background-size: 502px auto;
+    }
+}
